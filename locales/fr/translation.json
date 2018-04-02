@@ -1,0 +1,10 @@
+{
+  "title": "没有",
+  "button": {
+    "french": "法国",
+    "italian": "印度",
+    "english": "英国"
+  },
+  "flag": "img/french.jpg",
+  "alert" : "Cliquez sur OK pour fermer."
+}

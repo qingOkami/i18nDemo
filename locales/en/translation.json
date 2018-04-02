@@ -1,0 +1,11 @@
+{
+  "title": "English",
+  "button": {
+    "french": "this French",
+    "italian": "this italian",
+    "english": "this english"
+  },
+  "flag": "img/english.jpg",
+  "alert" : "Click on OK to close.",
+  "zhangqing":"null"
+}

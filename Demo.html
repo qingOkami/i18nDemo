@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <title>login</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/8.1.0/i18next.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.0/jquery-i18next.min.js" ></script>
+    <!-- <script src="/jquery-i18next.min.js" ></script> -->
+</head>
+
+<body>
+
+<ul class="nav">
+    <li><a href="#" data-i18n="nav.home"></a></li>
+    <li><a href="#" data-i18n="nav.page1"></a></li>
+    <li><a href="#" data-i18n="nav.page2"></a></li>
+</ul>
+
+<div class="content">
+    <input data-i18n="[placeholder]input.placeholder; [title]input.placeholder" />
+    <div>
+        <span data-i18n="zhangqing">张庆</span>
+    </div>
+</div>
+
+<script>
+    // use plugins and options as needed, for options, detail see
+    // http://i18next.com/docs/
+    i18next.init({
+        lng: 'en', // evtl. use language-detector https://github.com/i18next/i18next-browser-languageDetector
+        resources: { // evtl. load via xhr https://github.com/i18next/i18next-xhr-backend
+            en: {
+                translation: {
+                    input: {
+                        placeholder: "a placeholder"
+                    },
+                    nav: {
+                        home: 'Home',
+                        page1: 'Page One',
+                        page2: 'Page Two'
+                    },
+                    zhangqing:'OK没问题'
+
+                }
+            }
+        }
+    }, function(err, t) {
+        // for options see
+        // https://github.com/i18next/jquery-i18next#initialize-the-plugin
+        jqueryI18next.init(i18next, $);
+        // start localizing, details:
+        // https://github.com/i18next/jquery-i18next#usage-of-selector-function
+        $('.nav').localize();
+        $('.content').localize();
+    });
+</script>
+
+</body>
+
+</html>
